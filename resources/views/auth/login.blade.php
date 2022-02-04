@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bimbingan Konseling | Log in</title>
+  <title>Kredit Mobil | Log in</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -17,8 +17,8 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <img src="{{ asset('img/logo.png') }}" alt="Bimkon Logo" class="brand-image" style="opacity: .8" width="60%">
-    <!-- <a href="/login"><b>Bimbingan Konseling</b></a> -->
+    <!-- <img src="{{ asset('img/logo.png') }}" alt="Bimkon Logo" class="brand-image" style="opacity: .8" width="60%"> -->
+    <a href="{{ route('front') }}"><b>Suzuki Car</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="card">

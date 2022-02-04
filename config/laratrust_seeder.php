@@ -13,20 +13,24 @@ return [
 
     'roles_structure' => [
         'superadmin' => [
-            'guru' => 'c,r,u,d',
-            'siswa' => 'c,r,u,d',
-            'bimbingan' => 'c,r,u,d',
-            'pelanggaran' => 'c,r,u,d',
+            'mobil' => 'c,r,u,d',
+            'buyer' => 'c,r,u,d',
+            'order' => 'c,r,u,d',
             'profile' => 'r,u'
         ],
-        'guru' => [
-            'guru' => 'c,r,u,d',
-            'siswa' => 'c,r,u,d',
-            'bimbingan' => 'c,r,u,d',
-            'pelanggaran' => 'c,r,u,d',
+        'owner' => [
+            'mobil' => 'c,r,u,d',
+            'buyer' => 'c,r,u,d',
+            'order' => 'c,r,u,d',
             'profile' => 'r,u'
         ],
-        'siswa' => [
+        'sales' => [
+            'mobil' => 'c,r,u,d',
+            'buyer' => 'c,r,u,d',
+            'order' => 'c,r,u,d',
+            'profile' => 'r,u'
+        ],
+        'buyer' => [
             'profile' => 'r,u',
         ]
     ],

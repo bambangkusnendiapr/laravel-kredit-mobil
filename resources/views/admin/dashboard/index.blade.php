@@ -29,12 +29,12 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>{{ $teacher->count() }}</h3>
+                <h3>{{ $mobil->count() }}</h3>
 
-                <p>Guru</p>
+                <p>Mobil</p>
               </div>
               <div class="icon">
-                <i class="fas fa-user-tie"></i>
+                <i class="fas fa-car"></i>
               </div>
             </div>
           </div>
@@ -43,9 +43,9 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>{{ $student->count() }}</h3>
+                <h3>{{ $buyer->count() }}</h3>
 
-                <p>Siswa</p>
+                <p>Pembeli</p>
               </div>
               <div class="icon">
                 <i class="fas fa-users"></i>
@@ -57,12 +57,12 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>{{ $bimbingan->count() }}</h3>
+                <h3>{{ $beli->count() }}</h3>
 
-                <p>Bimbingan</p>
+                <p>Order</p>
               </div>
               <div class="icon">
-                <i class="fas fa-user-cog"></i>
+                <i class="fas fa-cart-plus"></i>
               </div>
             </div>
           </div>
@@ -71,12 +71,12 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>{{ $pelanggaran->count() }}</h3>
+                <h3>RP. {{ number_format($kredit->sum('nominal'), 0) }},-</h3>
 
-                <p>Jenis Pelanggaran</p>
+                <p>Uang Terkumpul</p>
               </div>
               <div class="icon">
-                <i class="fas fa-times-circle"></i>
+                <i class="fas fa-money-bill-wave"></i>
               </div>
             </div>
           </div>

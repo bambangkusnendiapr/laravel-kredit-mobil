@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bimbingan Konseling | @yield('title')</title>
+  <title>Kredit Mobil | @yield('title')</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -25,6 +25,9 @@
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+      <a href="{{ route('front') }}" target="_blank" class="nav-link">Home</a>
       </li>
     </ul>
 
@@ -51,7 +54,7 @@
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 1.0
     </div>
-    <strong>Copyright &copy; 2021 <a href="/">Bimbingan Konseling</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2021 <a href="/">Kredit Mobil</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->

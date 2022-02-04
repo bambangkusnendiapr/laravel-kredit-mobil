@@ -2,8 +2,8 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <a href="#" class="brand-link">
-    <img src="{{ asset('img/logo.png') }}" alt="Barbershop Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-    <span class="brand-text font-weight-light">Bimbingan Konseling</span>
+    <!-- <img src="{{ asset('img/logo.png') }}" alt="Barbershop Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
+    <span class="brand-text font-weight-light">Kredit Mobil</span>
   </a>
 
   <!-- Sidebar -->
@@ -16,13 +16,10 @@
       <div class="info">
         <div class="nav-item">
           @role('superadmin')
-            <a href="{{ route('profile.superadmin') }}" class="d-inline">{{ Auth::user()->name }}</a> &nbsp;
+            <a href="#" class="d-inline">{{ Auth::user()->name }}</a> &nbsp;
           @endrole
-          @role('guru')
-            <a href="{{ route('profile.teacher') }}" class="d-inline">{{ Auth::user()->name }}</a> &nbsp;
-          @endrole
-          @role('siswa')
-            <a href="{{ route('profile.student') }}" class="d-inline">{{ Auth::user()->name }}</a> &nbsp;
+          @role('sales')
+            <a href="#" class="d-inline">{{ Auth::user()->name }}</a> &nbsp;
           @endrole
           <span class="right badge badge-primary">{{ Auth::user()->roles->first()->display_name  }}</span>
         </div>
@@ -34,7 +31,7 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
               with font-awesome or any other icon font library -->
-              @role('superadmin|guru')
+        
         <li class="nav-item">
           <a href="{{ route('dashboard') }}" class="nav-link @yield('dashboard')">
             <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -44,45 +41,62 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="{{ route('teachers') }}" class="nav-link @yield('teachers')">
-            <i class="nav-icon fas fa-user-tie"></i>
+          <a href="{{ route('bank') }}" class="nav-link @yield('bank')">
+            <i class="nav-icon fas fa-building"></i>
             <p>
-              Guru
+              Bank
             </p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="{{ route('students') }}" class="nav-link @yield('students')">
+          <a href="{{ route('mobils.index') }}" class="nav-link @yield('mobil')">
+            <i class="nav-icon fas fa-car"></i>
+            <p>
+              Mobil
+            </p>
+          </a>
+        </li>
+        <!-- <li class="nav-item">
+          <a href="{{ route('mobil') }}" class="nav-link @yield('mobil')">
+            <i class="nav-icon fas fa-car"></i>
+            <p>
+              Mobil
+            </p>
+          </a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a href="{{ route('car') }}" class="nav-link @yield('car')">
+            <i class="nav-icon fas fa-car"></i>
+            <p>
+              Mobil
+            </p>
+          </a>
+        </li> -->
+        <li class="nav-item">
+          <a href="{{ route('buyer') }}" class="nav-link @yield('buyer')">
             <i class="nav-icon fas fa-users"></i>
             <p>
-              Siswa
+              Pembeli
             </p>
           </a>
         </li>
-        <li class="nav-item @yield('data-bimbingan')">
-          <a href="#" class="nav-link @yield('data_bimbingan')">
-            <i class="nav-icon fas fa-box-open"></i>
+        <li class="nav-item">
+          <a href="{{ route('beli') }}" class="nav-link @yield('beli')">
+            <i class="nav-icon fas fa-cart-plus"></i>
             <p>
-              Bimbingan
-              <i class="right fas fa-angle-left"></i>
+              Beli Mobil
             </p>
           </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="{{ route('bimbingan') }}" class="nav-link @yield('bimbingan')">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Bimbingan</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ route('pelanggaran') }}" class="nav-link @yield('pelanggaran')">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Pelanggaran</p>
-              </a>
-            </li>
-          </ul>
         </li>
-        @endrole
+        <!-- <li class="nav-item">
+          <a href="{{ route('order') }}" class="nav-link @yield('order')">
+            <i class="nav-icon fas fa-cart-plus"></i>
+            <p>
+              Order
+            </p>
+          </a>
+        </li> -->
+        
         <li class="nav-item">
           <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
             <i class="nav-icon fas fa-sign-out-alt"></i>

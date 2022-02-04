@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Teacher;
-use App\Models\Student;
-use App\Models\Bimbingan;
-use App\Models\Pelanggaran;
+use App\Models\Mobil;
+use App\Models\Buyer;
+use App\Models\Beli;
+use App\Models\Kredit;
 
 class DashboardController extends Controller
 {
@@ -19,10 +19,10 @@ class DashboardController extends Controller
         }
 
         return view('admin.dashboard.index', [
-            'teacher' => Teacher::all(),
-            'student' => Student::all(),
-            'bimbingan' => Bimbingan::all(),
-            'pelanggaran' => Pelanggaran::all(),
+            'mobil' => Mobil::all(),
+            'buyer' => Buyer::all(),
+            'beli' => Beli::all(),
+            'kredit' => Kredit::all(),
         ]);
     }
 }
